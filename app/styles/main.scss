@@ -27,13 +27,19 @@ ol {
 }
 
 a {
-    color: $color;
+    color: $color !important;
 }
 
 a:visited{
-
-        color: $color;
+        color: $color !important;
     }
+
+  a:hover{
+        color: $color !important;
+        text-decoration: none;
+        border-bottom: 1px dashed $color;
+    }
+
 h1 {
     font-weight:700;
     font-size: 3.0em;
@@ -82,8 +88,8 @@ footer {
 }
 
 .links {
-    font-size: 0.9em;
-    font-weight: 500;
+    font-size: 1.4em;
+    font-weight: 700;
 
     a {
         color: $color;
@@ -115,6 +121,7 @@ footer {
     background-color: $color;
     color: white;
     font-weight: 400;
+    font-size: 1.6em;
 }
 
 .archive {
@@ -493,5 +500,46 @@ main {
 
     .bg {
         height: auto;
+    }
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){
+   #sky {
+      display: none;
+   }
+
+      body, p {
+        color: black !important;
+    }
+
+    .form-control {
+      border-color: $color;
+    }
+
+    .form {
+          padding-right: 0px;
+          padding-left: 0px;
+          padding-bottom: 20px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  #sky {
+      display: none;
+   }
+
+    .form {
+          padding-right: 0px;
+          padding-left: 0px;
+          padding-bottom: 20px;
+    }
+
+   body, p {
+        color: black !important;
+    }
+
+    .form-control {
+      border-color: $color;
     }
 }
