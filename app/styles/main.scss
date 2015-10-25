@@ -26,12 +26,14 @@ ol {
   font-size: 19px;
 }
 
-a {
-    color: $color !important;
+p a {
+    color: white !important;
+    border-bottom: 1px dashed white;
 }
 
-a:visited{
-        color: $color !important;
+p a:visited{
+        color: white !important;
+         border-bottom: 1px dashed white;
     }
 
   a:hover{
